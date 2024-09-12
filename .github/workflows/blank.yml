@@ -8,8 +8,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: 
-      self-hosted
-      lable-single
+      - self-hosted
+      - lable-single
     
     steps:
       - name: Checkout code
@@ -25,8 +25,8 @@ jobs:
 
   test-on-windows:
     runs-on: 
-      self-hosted
-      label-multi
+      - self-hosted
+      - label-multi
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -37,8 +37,8 @@ jobs:
 
   test-on-macos:
     runs-on: 
-      self-hosted
-      label-single
+      - self-hosted
+      - label-single
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
