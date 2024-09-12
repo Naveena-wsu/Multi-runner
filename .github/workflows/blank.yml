@@ -26,7 +26,7 @@ jobs:
   test-on-windows:
     runs-on: 
      self-hosted
-      label-multi
+     label-multi
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
