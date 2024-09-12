@@ -7,7 +7,10 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: 
+      testing
+      lable-single
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -21,7 +24,9 @@ jobs:
           # Deploy commands here
 
   test-on-windows:
-    runs-on: windows-latest
+    runs-on: 
+      testing
+      label-multi
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -31,7 +36,9 @@ jobs:
           # Test commands here
 
   test-on-macos:
-    runs-on: macos-latest
+    runs-on: 
+      testing
+      label-single
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
